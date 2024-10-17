@@ -2,7 +2,7 @@
 import http from 'http';
 import { Logger } from '../utils/logger.js';
 import { DRPM_PORT, DRG_HOSTNAME, DRG_URL } from '../config.js';
-import drg from './routes.js';
+import drg from './drg-routes.js';
 process.title = DRG_HOSTNAME;
 
 /**
@@ -77,5 +77,5 @@ function onListening() {
   typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr?.port;
-  Logger.log(`Listening on ${DRG_URL}`);
+  Logger.log(`Listening on ${DRG_URL} port ${port}`);
 }

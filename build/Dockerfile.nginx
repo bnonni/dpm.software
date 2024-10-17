@@ -1,3 +1,14 @@
-FROM nginx:latest
+# Base image
+FROM nginx:alpine
 
-COPY ./nginx.conf /etc/nginx/nginx.conf
+# Remove default config file
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Add custom main NGINX config
+COPY ./build/nginx/linux.conf /etc/nginx/nginx.conf
+
+# Add custom NGINX server config
+COPY ./build/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80

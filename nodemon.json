@@ -1,11 +1,12 @@
 {
     "watch": [
-        "src"
+        "src",
+        "package.json"
     ],
-    "ext": "ts",
+    "ext": "ts,json",
     "ignore": [
         "src/**/*.test.ts",
         "node_modules"
     ],
-    "exec": "npm run build:esm && node ./dist/esm/drg/server.js"
+    "exec": "npm run build:esm && node ./dist/esm/registry/drg-server.js"
 }

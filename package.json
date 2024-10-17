@@ -89,7 +89,7 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "node ./dist/esm/drg/server.js",
+    "start": "node ./dist/esm/registry/drg-server.js",
     "clean": "rimraf dist coverage tests/compiled",
     "wipe": "rimraf node_modules package-lock.json",
     "test:register-hooks": "echo 'Unimplemented!' && exit 0; npm run build:tests; node --import ./dist/esm/src/register.js ./tests/compiled/tests/register-hooks.spec.js",
@@ -116,7 +116,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "fs-extra": "^11.2.0",
-    "tar": "^7.4.3"
+    "tar": "^7.4.3",
+    "tool5": "http://local.drg.drpm.tools/@drg/dht/8w7ckznnw671az7nmkrd19ddctpj4spgt8sjqxkmnamdartxh1bo/tool5/%5E6.1.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.5",
